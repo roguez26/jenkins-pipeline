@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage ( ’ Clonar c d i g o ’) {
+        stage('Clonar código') {
             steps {
-                git https://github.com/d0ubl3dd/LotteryServer.git
+                git url: 'https://github.com/d0ubl3dd/LotteryServer.git'
             }
         }
-        stage ( ’ Compilar ’) {
+        stage('Compilar') {
             steps {
-                sh ’ echo " Compilando el proyecto ..." ’
+                sh 'echo "Compilando el proyecto..."'
             }
         }
-        stage ( ’ Pruebas ’) {
+        stage('Pruebas') {
             steps {
-            sh ’ echo " Ejecutando pruebas ..." ’
+                sh 'echo "Ejecutando pruebas..."'
             }
         }
     }
